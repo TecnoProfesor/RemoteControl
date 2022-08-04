@@ -1,5 +1,5 @@
 // ***********************************************************
-// Template to control ARDUINO UNO using a laser pointer
+// Template to control the robot using a laser pointer
 // by Tecnoprofesor
 // ***********************************************************
 int movement = 0;

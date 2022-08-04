@@ -1,4 +1,7 @@
-
+// ***********************************************************
+// Template to control ARDUINO UNO using a laser pointer
+// by Tecnoprofesor
+// ***********************************************************
 int movement = 0;
 boolean stop_right = false;
 const int timestop = 200;

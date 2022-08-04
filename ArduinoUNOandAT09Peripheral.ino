@@ -1,5 +1,5 @@
 // ***********************************************************
-// Template to control ARDUINO UNO using AT09 bluetooth board
+// Template to control the robot using AT09 bluetooth board
 // by Tecnoprofesor
 // ***********************************************************
 #include <SoftwareSerial.h>

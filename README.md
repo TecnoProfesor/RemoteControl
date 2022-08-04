@@ -1,13 +1,10 @@
 # RemoteControl
-# ************ Bluetooth control *************************************************
-# RemoteControl.aia -> MIT App Inventor app. Import this file to modify the project
-# ArduinoUNOandAT09Peripheral.ino -> ARDUINO code 
-# *********************************************************************************
+## Bluetooth control
 
-************ Laser Control ******************************************************
+RemoteControl.aia -> MIT App Inventor app
 
-*********************************************************************************
+ArduinoUNOandAT09Peripheral.ino -> ARDUINO code (template)
 
-************ IR control *********************************************************
+## Laser control
 
-*********************************************************************************
+## IR control

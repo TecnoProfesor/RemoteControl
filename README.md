@@ -7,4 +7,6 @@ ArduinoUNOandAT09Peripheral.ino -> ARDUINO code (template)
 
 ## Laser control
 
+ArduinoUNOandLaserControl.ino -> ARDUINO code (template)
+
 ## IR control

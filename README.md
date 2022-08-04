@@ -1,4 +1,4 @@
-![Screenshot](screenshot.png)
+![Screenshot](20200909_080441.jpg)
 # RemoteControl
 ## Bluetooth control
 

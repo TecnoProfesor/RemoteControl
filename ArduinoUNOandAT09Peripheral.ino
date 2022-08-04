@@ -1,3 +1,7 @@
+// ***********************************************************
+// Template to control ARDUINO UNO using AT09 bluetooth board
+// by Tecnoprofesor
+// ***********************************************************
 #include <SoftwareSerial.h>
 SoftwareSerial mySerial(0, 1); // RX, TX
 
@@ -9,13 +13,13 @@ const int timestop = 200;
 void setup() {
   mySerial.begin(115200);
   Serial.begin(115200);
-  // Leds
+  // Leds pinout
   pinMode(2,OUTPUT);
   pinMode(3,OUTPUT);
   pinMode(4,OUTPUT);  
-  // Buzzer
+  // Buzzer pinout
   pinMode(speakerPin,OUTPUT);  
-  // L293D
+  // L293D pinout
   pinMode(7,OUTPUT);
   pinMode(8,OUTPUT);
   pinMode(9,OUTPUT);  
@@ -30,6 +34,9 @@ void setup() {
   Serial.println("BLE Periférico");
 }
 
+// ***********
+// R2D2 sounds
+// ***********
 void phrase1() {
     
     int k = random(1000,2000);
@@ -52,6 +59,9 @@ void phrase1() {
     } 
 }
 
+// ***********
+// R2D2 sounds
+// ***********
 void phrase2() {
     
     int k = random(1000,2000);
@@ -109,6 +119,8 @@ void DesSyncMotors() {
 
 void loop() {
 
+  // **********************************************
+  // Waiting for incoming data from the Serial port
   char reply[100];
   int i = 0;
   while (mySerial.available()) {
@@ -118,9 +130,10 @@ void loop() {
   //end the string
   reply[i] = '\0';
   Serial.print(reply);
+  // **********************************************
   
   switch (String(reply).toInt()) {
-    case 1: //Go backwards
+    case 1: //Go fordward
       StopRobot();
       delay(250);
       movement = 1;
@@ -134,7 +147,7 @@ void loop() {
       digitalWrite(10,HIGH);          
       digitalWrite(12,HIGH);
       break;
-    case 2: //Go forward
+    case 2: //Go backwards
       StopRobot();
       delay(250);
       movement = 2;
@@ -185,7 +198,7 @@ void loop() {
     case 6: // Async movement
       if ((movement == 1) or (movement == 2)) {DesSyncMotors();}
       break;
-    case 7: // R2D2
+    case 7: // R2D2 sound
       int K = 2000;
       switch (random(1,7)) {
           

@@ -1,4 +1,7 @@
-
+// ***********************************************************
+// Template to control robot using an IR remote control
+// by Tecnoprofesor
+// ***********************************************************
 #include "IRremote.h"
 
 IRrecv irrecv(13);
